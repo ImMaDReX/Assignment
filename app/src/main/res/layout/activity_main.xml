@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="msg"
+            type="String" />
+        <variable
+            name="loader"
+            type="Boolean" />
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/commonPadding"
+        tools:context=".activities.MainActivity">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@{msg}"
+            android:textSize="@dimen/textSize" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:text="@{msg}"
+            android:textSize="@dimen/textSize" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:text="@{msg}"
+            android:textSize="@dimen/textSize" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:text="@{msg}"
+            android:textSize="@dimen/textSize" />
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="@dimen/buttonWidth"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/border_button"
+            android:text="@string/start"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/buttonTextSize"
+            app:backgroundTint="@null" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/start"
+            android:layout_alignStart="@+id/start"
+            android:layout_alignEnd="@id/start"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/black"
+            android:visibility="@{loader?View.VISIBLE:View.GONE}" />
+
+    </RelativeLayout>
+</layout>

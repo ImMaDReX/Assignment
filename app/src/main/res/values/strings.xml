@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="welcome">Welcome</string>
+    <string name="successful">Successful</string>
+    <string name="unsuccessful">Unsuccessful</string>
+    <string name="start">Start</string>
+</resources>
